@@ -1,0 +1,23 @@
+Feature: My feature to do tag
+  Blabla...
+
+  # Noncompliant
+  # TODO: blabla
+
+  # Noncompliant
+  #TODO: blabla
+
+  # Noncompliant
+  #[[TODO]] blabla
+
+  # todoforthefirsttime
+
+  Scenario: Scenario 1 to do tag
+    Given Blabla given...
+    When Blabla when...
+    Then Blabla then...
+
+  Scenario: Scenario 2 to do tag
+    Given Blabla given...
+    When Blabla when...
+    Then Blabla then...

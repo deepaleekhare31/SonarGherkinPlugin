@@ -1,0 +1,23 @@
+Feature: My feature fix me tag
+  Blabla...
+
+  # Noncompliant {{Take the required action to fix the issue indicated by this comment.}}
+  # FIXME: blabla
+
+  # Noncompliant {{Take the required action to fix the issue indicated by this comment.}}
+  #FIXME: blabla
+
+  # Noncompliant {{Take the required action to fix the issue indicated by this comment.}}
+  #[[FIXME]] blabla
+
+  # fixmeforthefirsttime
+
+  Scenario: Scenario 1 fix me tag
+    Given Blabla given...
+    When Blabla when...
+    Then Blabla then...
+
+  Scenario: Scenario 2 fix me tag
+    Given Blabla given...
+    When Blabla when...
+    Then Blabla then...

@@ -1,0 +1,38 @@
+<p>
+    It is useless to set a tag on a <code>Scenario</code>, a <code>Scenario Outline</code> or an <code>Examples</code>
+    when this tag is already defined at <code>Feature</code> level.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+@mytag
+Feature: My feature
+
+  @mytag @othertag               # Noncompliant: useless tag @mytag
+  Scenario: My scenario
+    ...
+
+  @mytag                         # Noncompliant: useless tag @mytag
+  Scenario Outline: My scenario
+    ...
+
+    @mytag                       # Noncompliant: useless tag @mytag
+    Examples:
+      ...
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+@mytag
+Feature: My feature
+
+  @othertag
+  Scenario: My scenario
+    ...
+
+  Scenario Outline: My scenario
+    ...
+
+    Examples:
+      ...
+</pre>

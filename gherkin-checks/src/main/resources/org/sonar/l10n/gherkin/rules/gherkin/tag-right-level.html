@@ -1,0 +1,28 @@
+<p>
+    If a tag is set to all scenarios, it should be set to the feature instead.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+Feature: My feature
+
+  @mytag
+  Scenario: My scenario #1
+    ...
+
+  @mytag
+  Scenario Outline: My scenario #2
+    ...
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+@mytag
+Feature: My feature
+
+  Scenario: My scenario #1
+    ...
+
+  Scenario Outline: My scenario #2
+    ...
+</pre>

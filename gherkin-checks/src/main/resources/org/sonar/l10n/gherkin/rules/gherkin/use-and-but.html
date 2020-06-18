@@ -1,0 +1,22 @@
+<p>
+    Use <code>And</code> and <code>But</code> instead of redundant
+    <code>Given</code>/<code>When</code>/<code>Then</code> prefixes to make scenarios more readable.
+</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+Scenario: Add a product to my cart
+  Given I am a customer
+  Given I am on the catalog page           # Noncompliant: Use 'And' instead
+  When I add a product to my cart
+  Then I should see the product in my cart
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+Scenario: Add a product to my cart
+  Given I am a customer
+  And I am on the catalog page
+  When I add a product to my cart
+  Then I should see the product in my cart
+</pre>
